@@ -1,5 +1,5 @@
 provider "aws" {
-  profile    = "soracomdev"
+  profile    = "default"
   region     = "us-west-2" # sns text messaging is only available in some regions
   version = "~> 2.0"
 }
