@@ -32,7 +32,7 @@ resource "aws_iot_policy" "beamtest_policy" {
       "Action": [
         "iot:Publish"
       ],
-      "Resource": "arn:aws:iot:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:topic/beamtest/*"
+      "Resource": "arn:aws:iot:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:topic/beamtest"
     }
   ]
 }
