@@ -1,8 +1,9 @@
 # Update this variable with a cell phone number 
 # that will receive the text messages
+# Please include country code: ex. +18885555555
 variable "phone_number" {
   type = string
-  default = "<REPLACE_WITH_PHONE_NUMBER>"
+  default = "+<REPLACE_WITH_PHONE_NUMBER>"
 } 
 
 # A list of SIM IMSI ids. For each id an aws iot thing will be created.
