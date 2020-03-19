@@ -29,4 +29,5 @@ override.tf.json
 # example: *tfplan*
 
 # Ignore generated certificates and private keys but not the rootCA 
+certs
 !certs/rootCA.cert
