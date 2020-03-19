@@ -11,6 +11,12 @@ Since terraform does not currently support email for SNS we will instead send a 
 
 2. Edit the variables.tf file and add a phone number you would like to receive the sms texts on. Also add in at least one SIM IMSI in the imsi_ids variable.  
 
+    - You can take advantage of the Soracom [API](https://developers.soracom.io/en/api/) or [CLI](https://github.com/soracom/soracom-cli/releases) to get your list of IMSIs by listing subscribers, or listing subscribers in a certain group. For example, use this CLI command to list all subscribers:
+
+        `soracom subscribers list | grep -o '"imsi": *"[^"]*"' | grep -o '"[^"]*"$'`
+
+        (The two grep commands filter down the result to return just the list of IMSIs without the extra attributes.)
+
 3. (Optional) If you configured your aws cli with a user profile, add the name of the profile in the iot.tf file in the provider config. 
 
 # Initialize Terraform 
